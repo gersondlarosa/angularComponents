@@ -115,3 +115,55 @@ y tus ligas de header podremos el router link routerLink="/directivas" depeindie
 ![8](https://user-images.githubusercontent.com/68626555/170764099-c4339788-7632-4afc-9f1f-013f789ce9f8.png)
 
 
+## Como conectar al back nuestro front
+
+Ingresaremos en nuestro app.modules.ts he importaemos 
+
+import {HttpClientModule} from '@angular/common/http';
+
+Despues en imports agregaremos el  HttpClientModule y quedara de la siguiente forma
+
+
+![ancgula + back](https://user-images.githubusercontent.com/68626555/171520557-1cc98fc4-809a-4200-84b1-58a2184b3759.png)
+
+
+Luego ingresaremos a cliente.service.ts he importalemos HttpClient y map
+
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
+
+en el contructor crearemos una variable en la cual llamremosnuestra url del back y sera del tipo string yo la nombre urlEndPoint esto dentro de nuestra class Cliente Service
+
+
+public urlEndPoint:string = 'http://localhost:8080/api/clientes';
+
+y en el constructor llamaremos y el objeto lo mandaremos llamr via constructor 
+
+constructor(private http: HttpClient) { }
+
+y la forma mas simple de listar nuestro elemento es mediante un get de clientes y retornaremos un obserbable de clientes <Cliente[]> y hacemos el cast del tipo cliente 
+
+  getClientes(): Observable <Cliente[]>{
+    return this.http.get<Cliente[]>(this.urlEndPoint);
+    
+      //Se hace cast del tipo cliente <Cliente[]>
+  return this.http.get<Cliente[]>(this.urlEndPoint);
+  
+  
+  //otra forma de llamar al arreglo de clientes esta forma es si queremos ocupar el map con una promesa de tipo cleinte 
+//return this.http.get(this.urlEndPoint).pipe(
+  //map (response => response as Cliente[])
+//);
+  
+  }
+
+
+![httpclient](https://user-images.githubusercontent.com/68626555/171521086-599e156a-cda5-4bc8-81f6-56cfb0f4c443.png)
+
+corremos nuestro front con 
+
+//ng serve -o 
+
+y si todo sale bien no arrojara una lista de clientes 
+
+![web](https://user-images.githubusercontent.com/68626555/171521951-94fae96e-d214-4e34-92c2-1e4759bc026a.png)
