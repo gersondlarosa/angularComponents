@@ -8,6 +8,8 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import {ClienteService} from './clientes/cliente.service';
 import {RouterModule, Routes} from '@angular/router';
+//Estes es el que hace la conexion con el backend
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
@@ -25,6 +27,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    //Se agrega para que pueda tomar el HttpClientModule que se importo
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
