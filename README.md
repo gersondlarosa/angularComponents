@@ -167,3 +167,78 @@ corremos nuestro front con
 y si todo sale bien no arrojara una lista de clientes 
 
 ![web](https://user-images.githubusercontent.com/68626555/171521951-94fae96e-d214-4e34-92c2-1e4759bc026a.png)
+
+##Creando component form.component
+
+Despues de que hicimos nuestro Brack y la conexion del back al fron crearemos nuestro formulario con el siguietne comando generara una nueva este comando cre un componente sin carpeta en la carpeta de clientes el form.css y el form.component.spec
+ng g c clientes/form --flat
+
+![formcompo](https://user-images.githubusercontent.com/68626555/172967110-e6af9e69-aa8b-44ea-af95-4d88a9e1f84c.png)
+
+
+![formcompo 2](https://user-images.githubusercontent.com/68626555/172967124-783f38f2-f0d8-4c52-9a5b-075b6c130cfa.png)
+
+
+Importaremos en import agregaremos FormsModule y import { FormsModule} from '@angular/forms';
+
+![formcompo 3](https://user-images.githubusercontent.com/68626555/172969684-95b1eb2a-f2e4-45e7-854f-f35a56dac4cd.png)
+
+
+En nuestro form.html crearemos el formulario en el form pondremos el nombre que se encuentra en el clientes ts en nuestro imput pondremos un [(ngModel)]="cliente.nombre" name="nombre"> y aremos lo mismo co apellido y email
+
+      <div class="card bg-dark text-white">
+        <div class="card-header">{{titulo}}</div>
+        <div class="card-body">
+
+          <form >
+            <div class="form-groupr row">
+              <label for="nombre" class="col-form-label col-sm-2">Nobre</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" [(ngModel)]="cliente.nombre" name="nombre">
+                </div>
+            </div>
+
+            <div class="form-groupr row">
+              <label for="apellido" class="col-form-label col-sm-2" >Apellido</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido">
+                </div>
+            </div>
+
+            <div class="form-groupr row">
+              <label for="email" class="col-form-label col-sm-2">Email</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" [(ngModel)]="cliente.email" name="email">
+                </div>
+            </div>
+          </form>
+         </div>
+         
+      </div>![formhtml](https://user-images.githubusercontent.com/68626555/172972322-169f2dfa-8a70-4229-bace-257f6ad667d9.png)
+
+      
+   Despues en nuestro form.component.ts instanciaremos una clase de Cliente y lo importaremos recordemos que esta al mimo nivel y lo traemos a si
+   import { Cliente} from './cliente';
+             
+      public cliente: Cliente = new Cliente();
+      
+      Esto que se enceuntra en el ngModel va a poblar lo que se encuentra en nuestro cliente.ts
+      cliente.nombre
+      cliente.apellido
+      cliente.email
+
+![form ts](https://user-images.githubusercontent.com/68626555/172972617-4255c769-1548-43f3-9b49-46bad2dc34ed.png)
+
+en nuetro form crearemos la ccion con (ngSubmit) = "create"
+
+![create](https://user-images.githubusercontent.com/68626555/172973296-0e74318b-648a-4f4f-9534-03161b7185a2.png)
+
+y en nuestro formcomponent creamos el metodo
+
+      public create(): void{
+          console.log("Clicked!")
+          console.log(this.cliente)
+        }
+        
+        
+![formcompo 3](https://user-images.githubusercontent.com/68626555/172973587-46445665-48c4-4584-ad5b-007f58f94603.png)
