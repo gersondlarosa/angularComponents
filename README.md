@@ -184,36 +184,44 @@ Importaremos en import agregaremos FormsModule y import { FormsModule} from '@an
 ![formcompo 3](https://user-images.githubusercontent.com/68626555/172969684-95b1eb2a-f2e4-45e7-854f-f35a56dac4cd.png)
 
 
-En nuestro form.html crearemos el formulario en el form pondremos el nombre que se encuentra en el clientes ts en nuestro imput pondremos un [(ngModel)]="cliente.nombre" name="nombre"> y aremos lo mismo co apellido y email
+En nuestro form.html crearemos el formulario en el form pondremos el nombre que se encuentra en el clientes ts en nuestro imput pondremos un [(ngModel)]="cliente.nombre" name="nombre"> y aremos lo mismo con apellido y email
 
       <div class="card bg-dark text-white">
-        <div class="card-header">{{titulo}}</div>
-        <div class="card-body">
+  <div class="card-header">{{titulo}}</div>
+  <div class="card-body">
 
-          <form >
-            <div class="form-groupr row">
-              <label for="nombre" class="col-form-label col-sm-2">Nobre</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" [(ngModel)]="cliente.nombre" name="nombre">
-                </div>
-            </div>
+    <form (ngSubmit) = "create()">
+      <div class="form-groupr row">
+        <label for="nombre" class="col-form-label col-sm-2">Nobre</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="cliente.nombre" name="nombre">
+          </div>
+      </div>
 
-            <div class="form-groupr row">
-              <label for="apellido" class="col-form-label col-sm-2" >Apellido</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido">
-                </div>
-            </div>
+      <div class="form-groupr row">
+        <label for="apellido" class="col-form-label col-sm-2" >Apellido</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido">
+          </div>
+      </div>
 
-            <div class="form-groupr row">
-              <label for="email" class="col-form-label col-sm-2">Email</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" [(ngModel)]="cliente.email" name="email">
-                </div>
-            </div>
-          </form>
-         </div>
-         
+      <div class="form-groupr row">
+        <label for="email" class="col-form-label col-sm-2">Email</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="cliente.email" name="email">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="col sm 6">
+            <button class="btn btn-primary" role="button">Crear</button>
+          </div>
+      </div>
+    </form>
+   </div>
+</div>
+
+         nota: en el form debe de quedar asi  <form (ngSubmit) = "create()">
       </div>![formhtml](https://user-images.githubusercontent.com/68626555/172972322-169f2dfa-8a70-4229-bace-257f6ad667d9.png)
 
       
@@ -242,3 +250,16 @@ y en nuestro formcomponent creamos el metodo
         
         
 ![formcompo 3](https://user-images.githubusercontent.com/68626555/172973587-46445665-48c4-4584-ad5b-007f58f94603.png)
+
+## Creando la ruta de navegacion del formulario
+
+En nuestro clientes.component.html
+
+crearemos nuestro routerLink 
+
+        <div class="my-2 text-left">
+          <button class="btn btn-rounded btn-primary" type="button" [routerLink]= "['/clientes/form']">Crear cliente</button>
+        </div>
+
+
+![rutas con router linck](https://user-images.githubusercontent.com/68626555/173208931-214e0ef0-48a9-42c6-b62f-6e0706ca2725.png)
