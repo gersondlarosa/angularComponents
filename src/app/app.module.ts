@@ -17,6 +17,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
   {path: 'directivas', component: DirectivaComponent},
   {path: 'clientes', component: ClientesComponent},
+  //Ruta y se mapea al FormComponent
+  {path: 'clientes/form', component: FormComponent}
 ]
 
 @NgModule({
