@@ -108,6 +108,31 @@ en declration agregaremos todos nuestros componentes
     Quedara a si
      
  ![7](https://user-images.githubusercontent.com/68626555/170763583-82eb5502-eea1-49ef-881a-2792b49ceccf.png)
+ 
+ 
+ 
+ # Implementando Observable en nuestra clase Servicio ClienteService
+ 
+ Iimportamos import { of, Observable } from 'rxjs'; esto es en la version de angular 6 en adelante
+ 
+  ![1](https://user-images.githubusercontent.com/68626555/177238193-b290e8e9-f724-4180-9502-a2e359ebf773.png)
+  
+  
+  Despues en clietnes componente ya que en el contructor instanciamos al clientes services en ngOnInit suscribimos y dentro del metodo mandamos llamr el atributo clientes ya que es lo que se obtiene de cleitne services
+
+ 
+ 
+ 
+ ![2](https://user-images.githubusercontent.com/68626555/177238373-17b3e54c-674a-4c38-ac8b-1ba7bec5d31f.png)
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 y tus ligas de header podremos el router link routerLink="/directivas" depeindiendo de donde quieras apuntar
     
