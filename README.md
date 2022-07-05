@@ -106,8 +106,8 @@ en declration agregaremos todos nuestros componentes
     
     
     Quedara a si
-    
-    ![7](https://user-images.githubusercontent.com/68626555/170763583-82eb5502-eea1-49ef-881a-2792b49ceccf.png)
+     
+ ![7](https://user-images.githubusercontent.com/68626555/170763583-82eb5502-eea1-49ef-881a-2792b49ceccf.png)
 
 y tus ligas de header podremos el router link routerLink="/directivas" depeindiendo de donde quieras apuntar
     
