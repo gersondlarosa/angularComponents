@@ -278,13 +278,22 @@ y en nuestro formcomponent creamos el metodo
 
 ## Creando la ruta de navegacion del formulario
 
-En nuestro clientes.component.html
+Primero en nuetro app.dodule.ts importaremos RouterModule, `import {RouterModule, Routes} from '@angular/router';`
 
-crearemos nuestro routerLink 
+![routes01](https://user-images.githubusercontent.com/68626555/178082156-1e90112e-7eb3-4783-a7e6-ba06d416823a.png)
 
-        <div class="my-2 text-left">
-          <button class="btn btn-rounded btn-primary" type="button" [routerLink]= "['/clientes/form']">Crear cliente</button>
-        </div>
+Despues creamos una contstante donde mandaremos llamar el path de home y los componentes con distintas formas y rutas 
 
 
-![rutas con router linck](https://user-images.githubusercontent.com/68626555/173208931-214e0ef0-48a9-42c6-b62f-6e0706ca2725.png)
+![routes02](https://user-images.githubusercontent.com/68626555/178082367-5c6819f4-d3d1-4390-94b9-6c0e14337434.png)
+
+PArapoder mandar llamr la constante en immports mandamos llamar al RouterModule.forRoot(routes) con el nombre de la constante
+
+![routes03](https://user-images.githubusercontent.com/68626555/178082467-01e44146-31bd-43c8-954d-7c1d26c318c4.png)
+
+
+En nuestro header component mandamos llamar con `routerLink` y el nombre de la ruta que querramos y para dejarla activa lo dejamos como `routerLink`
+
+![routes04](https://user-images.githubusercontent.com/68626555/178082693-73909431-7776-488c-b182-92e50c93477f.png)
+
+
