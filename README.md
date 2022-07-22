@@ -298,4 +298,12 @@ y en nuestro formcomponent creamos el metodo
         
 ![formcompo 3](https://user-images.githubusercontent.com/68626555/172973587-46445665-48c4-4584-ad5b-007f58f94603.png)
 
+Al correr el proyecto le daremos clie en crear y nos enviara al fomrcomponent
+
+![01](https://user-images.githubusercontent.com/68626555/180339032-031c29ab-6aa6-446c-a462-0beaf72f3eb4.png)
+
+y crearemo un cliente nuevo al darle crear nos arrojara el cliente nuecvo en un json
+
+![02](https://user-images.githubusercontent.com/68626555/180339088-612e2fee-10de-4117-b72f-6391cb12c04d.png)
+
 
