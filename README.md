@@ -333,6 +333,15 @@ Ya que importamos la libreria como tenemos mas de una linea en nuetro create abr
 ![sweet02](https://user-images.githubusercontent.com/68626555/182730408-9f4a71bf-7a93-42aa-8c2f-15e27ef2141e.png)
 
 corremos nuestro Front y Back 
-          
+
+# Cargando los datos en el formulario para actualiza
+
+![1](https://user-images.githubusercontent.com/68626555/183771433-a70d14ac-4225-48a5-9f29-3ff96f62ab18.png)
 
 
+
+![2](https://user-images.githubusercontent.com/68626555/183771441-b5a8bc72-16b6-4271-85b7-8d1b1236212e.png)
+
+![3](https://user-images.githubusercontent.com/68626555/183771452-c27348c6-3b55-419f-9e8e-ee8589ea7521.png)
+
+![4](https://user-images.githubusercontent.com/68626555/183771457-f91b4f53-83e3-4f98-b559-1cecdec397f7.png)
