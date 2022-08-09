@@ -319,6 +319,29 @@ en nuetros metodo crear invocamos el metodo crear services y mandamos a llamar a
 ![002](https://user-images.githubusercontent.com/68626555/181678400-7753c05b-5595-4778-aaae-9f4a3295dbe3.png)
 
 
+# Instalar SweetAlert2 para enviar mensajes de alerta en el cliente
+
+Para instalar SweetAlert2 debemos de ingresar el siguiente codigo en la consola
+
+          npm install sweetalert2 --save
+          
+![sweet](https://user-images.githubusercontent.com/68626555/182730380-4a08b2b7-a8b9-4c08-8f4d-67122e2c6731.png)
+
+          
+Ya que importamos la libreria como tenemos mas de una linea en nuetro create abrimos llaves y mandamos a llamr el Sweetalert con swal.fire ya que es una version resient mandmos un mensaje y con las llaves de interpolacion llamamos al cliente que se encuentra en clientes.ts y por ultimo parametro mandamos llamar un success que se envia correctamente
+
+![sweet02](https://user-images.githubusercontent.com/68626555/182730408-9f4a71bf-7a93-42aa-8c2f-15e27ef2141e.png)
+
+corremos nuestro Front y Back 
+
+# Cargando los datos en el formulario para actualiza
+
+![1](https://user-images.githubusercontent.com/68626555/183771433-a70d14ac-4225-48a5-9f29-3ff96f62ab18.png)
 
 
 
+![2](https://user-images.githubusercontent.com/68626555/183771441-b5a8bc72-16b6-4271-85b7-8d1b1236212e.png)
+
+![3](https://user-images.githubusercontent.com/68626555/183771452-c27348c6-3b55-419f-9e8e-ee8589ea7521.png)
+
+![4](https://user-images.githubusercontent.com/68626555/183771457-f91b4f53-83e3-4f98-b559-1cecdec397f7.png)
