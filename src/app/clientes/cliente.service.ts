@@ -35,4 +35,9 @@ public urlEndPoint:string = 'http://localhost:8080/api/clientes';
     return this.http.post<Cliente>(this.urlEndPoint, cliente, {headers: this.httpHeaders})
   }
 
+
+  getCliente(id): Observable<Cliente>{
+    return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`)
+  }
+
 }
