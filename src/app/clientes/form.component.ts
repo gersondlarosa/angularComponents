@@ -43,5 +43,17 @@ cargarCliente(): void{
   }
 
 
+/*creasmo el metodo update traemos la propiedad de cleinteServices.udate y le cargamos el cliente, despues subscribimos y le mandamos la ruta
+  y mandamos un menssal con el cliente y el nombre y que se succes
+*/
+update():void{
+  this.clienteService.update(this.cliente)
+  .subscribe( cliente =>{
+    this.router.navigate(['/clientes'])
+    swal.fire('Cliente Actualizado', `Cliente ${cliente.nombre} actualizado con éxito`, 'success')
+  }
+
+  )
+}
 
 }

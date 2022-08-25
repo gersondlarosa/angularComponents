@@ -40,4 +40,12 @@ public urlEndPoint:string = 'http://localhost:8080/api/clientes';
     return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`)
   }
 
+
+  /*Creamo nuevo metodo que sera update que resivira el obejto cliente y retornaremos un Obserbable de tipo clientes
+  pasaremostres parametros el urlEndPoint cliente.id , cliente y las cabezeras depues iremos al form.components*/
+
+  update(cliente: Cliente): Observable<Cliente>{
+    return this.http.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders})
+  }
+
 }
