@@ -43,8 +43,8 @@ cargarCliente(): void{
   }
 
 
-/*creasmo el metodo update traemos la propiedad de cleinteServices.udate y le cargamos el cliente, despues subscribimos y le mandamos la ruta
-  y mandamos un menssal con el cliente y el nombre y que se succes
+/*creasmo el metodo update traemos la propiedad de cleinteServices.update y le cargamos el cliente, una vez que se actualiza vamos a redirigir al listado de clientes console
+ un menssal con el cliente y el nombre y que sea succes
 */
 update():void{
   this.clienteService.update(this.cliente)
