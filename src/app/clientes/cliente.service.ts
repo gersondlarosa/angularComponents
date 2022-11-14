@@ -48,4 +48,12 @@ public urlEndPoint:string = 'http://localhost:8080/api/clientes';
     return this.http.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders})
   }
 
+  /*En cliente services vamosa crear un metodo que se llame delete que contendra un id de tipo number y va a traer un obserbable de cleitne
+  y retornara un http de tipo delete y concatenaremos con cliente y traera el urlEndPoint y el id tambien traera las cabezeras headers y httpHeaders
+  despues iremos a nuestro cliente components*/
+
+  delete(id: number): Observable<Cliente>{
+  return  this.http.delete<Cliente>(`${this.urlEndPoint}/${id}`, {headers:  this.httpHeaders  })
+  }
+
 }
